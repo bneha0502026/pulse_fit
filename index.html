@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PulseFit Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="brand">PulseFit</div>
+      <div class="nav-links">
+        <a href="#plans">Plans</a>
+        <a href="#bmi">BMI</a>
+        <a href="#categories">Exercises</a>
+        <a href="#progress">Progress</a>
+        <a href="#timetable">Timetable</a>
+      </div>
+    </nav>
+
+    <section class="hero-content">
+      <div class="hero-copy">
+        <p class="eyebrow">Simple fitness planning for everyday consistency</p>
+        <h1>Train smarter, stay steady, and track every small win.</h1>
+        <p class="hero-text">
+          Explore clean workout plans, calculate your BMI, browse exercises by goal,
+          log your weekly progress, and keep up with your class schedule in one neat place.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#plans">View Plans</a>
+          <a class="button secondary" href="#progress">Track Progress</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card highlight-blue">
+          <span>Weekly focus</span>
+          <strong>Strength + Mobility</strong>
+        </div>
+        <div class="line-art hero-illustration" aria-hidden="true">
+          <svg viewBox="0 0 420 520" role="img">
+            <title>Line art fitness illustration</title>
+            <rect x="24" y="24" width="372" height="472" rx="34"></rect>
+            <path d="M110 398c16-62 42-118 82-160 20-21 44-32 72-32 24 0 43 8 58 24"></path>
+            <circle cx="242" cy="145" r="30"></circle>
+            <path d="M242 176v92"></path>
+            <path d="M242 218l-66 34"></path>
+            <path d="M242 218l76 24"></path>
+            <path d="M242 268l-44 88"></path>
+            <path d="M242 268l62 92"></path>
+            <path d="M150 360h180"></path>
+            <path d="M136 112c18-16 36-24 54-24"></path>
+            <path d="M302 108c18 4 34 15 48 34"></path>
+          </svg>
+        </div>
+        <div class="hero-card highlight-yellow">
+          <span>Today's goal</span>
+          <strong>45 min active session</strong>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section" id="plans">
+      <div class="section-heading">
+        <p class="eyebrow">Workout plans</p>
+        <h2>Choose a plan that fits your pace</h2>
+      </div>
+
+      <div class="plan-grid">
+        <article class="card plan-card accent-green">
+          <h3>Beginner Reset</h3>
+          <p>3 days a week of full-body basics, light cardio, and recovery stretches.</p>
+          <ul>
+            <li>Bodyweight squats</li>
+            <li>Incline push-ups</li>
+            <li>Brisk walking</li>
+          </ul>
+        </article>
+
+        <article class="card plan-card accent-red">
+          <h3>Fat Burn Flow</h3>
+          <p>4 focused sessions mixing intervals, circuits, and steady-state movement.</p>
+          <ul>
+            <li>Jump rope rounds</li>
+            <li>Core circuits</li>
+            <li>Bike or treadmill finishers</li>
+          </ul>
+        </article>
+
+        <article class="card plan-card accent-blue">
+          <h3>Strength Builder</h3>
+          <p>5-day split designed to increase strength, stability, and confidence.</p>
+          <ul>
+            <li>Push and pull days</li>
+            <li>Lower-body power</li>
+            <li>Mobility cooldown</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split-section" id="bmi">
+      <div class="section-heading">
+        <p class="eyebrow">BMI calculator</p>
+        <h2>Check your body mass index</h2>
+        <p>Enter your height and weight for a quick reference point.</p>
+      </div>
+
+      <div class="bmi-layout">
+        <form class="card bmi-form" id="bmi-form">
+          <label>
+            Height (cm)
+            <input type="number" id="height" min="50" max="300" placeholder="170" required>
+          </label>
+          <label>
+            Weight (kg)
+            <input type="number" id="weight" min="20" max="400" placeholder="65" required>
+          </label>
+          <button class="button primary" type="submit">Calculate BMI</button>
+        </form>
+
+        <div class="card bmi-result">
+          <p class="result-label">Your result</p>
+          <h3 id="bmi-value">--</h3>
+          <p id="bmi-status">Add your details to see your BMI category.</p>
+          <div class="bmi-scale">
+            <span class="under">Underweight</span>
+            <span class="normal">Healthy</span>
+            <span class="over">Overweight</span>
+            <span class="obese">Obese</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="categories">
+      <div class="section-heading">
+        <p class="eyebrow">Exercise categories</p>
+        <h2>Move by goal, not guesswork</h2>
+      </div>
+
+      <div class="category-grid">
+        <article class="card category-card">
+          <div class="line-art category-illustration strength-art" aria-hidden="true">
+            <svg viewBox="0 0 320 220" role="img">
+              <title>Strength line art</title>
+              <circle cx="160" cy="56" r="20"></circle>
+              <path d="M160 78v56"></path>
+              <path d="M160 98l-58 24"></path>
+              <path d="M160 98l58 24"></path>
+              <path d="M160 134l-34 54"></path>
+              <path d="M160 134l42 54"></path>
+              <path d="M72 118h26"></path>
+              <path d="M222 118h26"></path>
+              <circle cx="62" cy="118" r="10"></circle>
+              <circle cx="108" cy="118" r="10"></circle>
+              <circle cx="212" cy="118" r="10"></circle>
+              <circle cx="258" cy="118" r="10"></circle>
+            </svg>
+          </div>
+          <div>
+            <h3>Strength</h3>
+            <p>Compound lifts, resistance bands, and dumbbell work for total-body power.</p>
+          </div>
+        </article>
+
+        <article class="card category-card">
+          <div class="line-art category-illustration flexibility-art" aria-hidden="true">
+            <svg viewBox="0 0 320 220" role="img">
+              <title>Flexibility line art</title>
+              <circle cx="208" cy="56" r="18"></circle>
+              <path d="M188 78c-28 14-50 38-70 70"></path>
+              <path d="M190 92c-18 30-18 58 0 84"></path>
+              <path d="M190 176h70"></path>
+              <path d="M122 148h60"></path>
+              <path d="M112 148c-20 14-30 24-38 42"></path>
+              <path d="M212 92c24 18 36 42 40 74"></path>
+              <path d="M72 190h186"></path>
+            </svg>
+          </div>
+          <div>
+            <h3>Flexibility</h3>
+            <p>Mobility flows, deep stretches, and posture-friendly routines for recovery.</p>
+          </div>
+        </article>
+
+        <article class="card category-card">
+          <div class="line-art category-illustration cardio-art" aria-hidden="true">
+            <svg viewBox="0 0 320 220" role="img">
+              <title>Cardio line art</title>
+              <circle cx="146" cy="50" r="18"></circle>
+              <path d="M146 70l24 38"></path>
+              <path d="M170 108l48 18"></path>
+              <path d="M170 108l-42 40"></path>
+              <path d="M128 148l-40 22"></path>
+              <path d="M170 108l10 54"></path>
+              <path d="M180 162l52 18"></path>
+              <path d="M82 182h164"></path>
+              <path d="M202 62c16 8 28 22 36 42"></path>
+              <path d="M226 58c20 12 34 30 42 54"></path>
+            </svg>
+          </div>
+          <div>
+            <h3>Cardio</h3>
+            <p>Intervals, endurance work, and energetic sessions that build stamina.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split-section" id="progress">
+      <div class="section-heading">
+        <p class="eyebrow">Progress tracking</p>
+        <h2>Keep your weekly momentum visible</h2>
+        <p>Update your sessions, water intake, and sleep hours. Your progress is saved on this device.</p>
+      </div>
+
+      <div class="progress-layout">
+        <form class="card progress-form" id="progress-form">
+          <label>
+            Workouts completed
+            <input type="range" id="workouts" min="0" max="7" value="4">
+            <span id="workouts-output">4 / 7</span>
+          </label>
+          <label>
+            Water intake (glasses)
+            <input type="range" id="water" min="0" max="12" value="8">
+            <span id="water-output">8 / 12</span>
+          </label>
+          <label>
+            Sleep average (hours)
+            <input type="range" id="sleep" min="0" max="10" value="7">
+            <span id="sleep-output">7 / 10</span>
+          </label>
+        </form>
+
+        <div class="progress-panels">
+          <div class="card stat-card accent-yellow">
+            <p>Consistency score</p>
+            <h3 id="consistency-score">63%</h3>
+          </div>
+          <div class="card stat-card accent-green">
+            <p>Weekly note</p>
+            <h3 id="progress-note">Solid rhythm. Keep going.</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="timetable">
+      <div class="section-heading">
+        <p class="eyebrow">Class timetable</p>
+        <h2>Plan your week at a glance</h2>
+      </div>
+
+      <div class="card timetable-card">
+        <table>
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Morning</th>
+              <th>Evening</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday</td>
+              <td>Yoga Flow - 7:00 AM</td>
+              <td>Strength Circuit - 6:00 PM</td>
+            </tr>
+            <tr>
+              <td>Tuesday</td>
+              <td>HIIT Express - 7:30 AM</td>
+              <td>Core Balance - 6:30 PM</td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td>Pilates - 7:00 AM</td>
+              <td>Restorative Stretch - 6:00 PM</td>
+            </tr>
+            <tr>
+              <td>Thursday</td>
+              <td>Cardio Burn - 7:30 AM</td>
+              <td>Box Fit - 6:30 PM</td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>Mobility Reset - 7:00 AM</td>
+              <td>Full Body Lift - 6:00 PM</td>
+            </tr>
+            <tr>
+              <td>Saturday</td>
+              <td>Bootcamp - 8:00 AM</td>
+              <td>Open Gym - 5:00 PM</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>PulseFit Studio • Build healthy habits one day at a time.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
