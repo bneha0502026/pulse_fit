@@ -28,7 +28,7 @@ PulseFit Studio is a simple and neat dark-themed fitness website built with HTML
 
 ## Deployment Link
 
-Live Demo: `Add your deployment link here`
+Live Demo: `https://bneha0502026.github.io/pulse_fit/`
 
 - GitHub Pages
 
